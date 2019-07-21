@@ -6,8 +6,28 @@
   crossorigin="anonymous"></script>
   <script src="./env.js"></script>
   <link href="env.css" rel="stylesheet">
+  <script src="./stopwatch.js"></script>
+  <link href="stopwatch.css" rel="stylesheet">
 </head>
 <body>
+  <div id="skrollr-body">
+    <div class="container">
+      <div class="clock">
+        <div class="hour-hand" data-0="transform:rotate(150deg);" data-10000="transform:rotate(237deg);"></div>
+        <div class="minute-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(1080deg);"></div>
+        <div class="seconds-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(64800deg);"></div>
+        <div class="pivot"></div>
+
+        <div class="clock-shadows">
+          <div class="hour-hand" data-0="transform:rotate(150deg);" data-10000="transform:rotate(237deg);"></div>
+          <div class="minute-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(1080deg);"></div>
+          <div class="seconds-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(64800deg);"></div>
+          <div class="pivot"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 <div class="envelope new">
   <div class="front">
     <div class="mailme">
@@ -22,6 +42,24 @@
     <div class="flap right-flap"></div>
     <div class="flap bottom-flap"></div>
     <div class="flap top-flap"></div>
+  </div>
+</div>
+<div id="skrollr-body">
+  <div class="container">
+    <div class="clock">
+      <div class="hour-hand" data-0="transform:rotate(150deg);" data-10000="transform:rotate(237deg);"></div>
+      <div class="minute-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(1080deg);"></div>
+      <div class="seconds-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(64800deg);"></div>
+      <div class="pivot"></div>
+
+      <div class="clock-shadows">
+        <div class="hour-hand" data-0="transform:rotate(150deg);" data-10000="transform:rotate(237deg);"></div>
+        <div class="minute-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(1080deg);"></div>
+        <div class="seconds-hand" data-0="transform:rotate(0deg);" data-10000="transform:rotate(64800deg);"></div>
+        <div class="pivot"></div>
+      </div>
+
+    </div>
   </div>
 </div>
 </body>
