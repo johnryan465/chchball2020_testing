@@ -27,6 +27,7 @@ $(function(){
     if(!$('.envelope').hasClass('open')){
       $(this).removeClass('new').addClass('open');
     }
-
+    $('.seal').addClass('flipped');
+    $('.slide-in').css('z-index', 10);
   });
 });
