@@ -1,9 +1,14 @@
-body{
- background-color: #2E2E2E;
-}
 
-#skrollr-body{
-
+.clock {
+  width:302px;
+  height:388px;
+  background-image:url(http://stebaker.com/clock_face/clock_face.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: calc((100% - 302px)/2);
+  left: -webkit-calc((100% - 302px)/2);
+  left: -moz-calc((100% - 302px)/2);
+  top:15%;
 }
 
 .container{
@@ -12,20 +17,9 @@ body{
 	position: fixed;
 }
 
-.clock{
-	width:302px;
-	height:388px;
-	background-image:url(http://stebaker.com/clock_face/clock_face.png);
-	background-repeat: no-repeat;
-	position: absolute;
-	left: calc((100% - 302px)/2);
-	left: -webkit-calc((100% - 302px)/2);
-	left: -moz-calc((100% - 302px)/2);
-	top:15%;
-}
 
 .clock div{
-	margin-top:84px;
+	margin-top: 84px;
 }
 
 .clock-shadows div{
