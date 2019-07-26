@@ -29,5 +29,6 @@ $(function(){
     }
     $('.seal').addClass('flipped');
     $('.slide-in').css('z-index', 10);
+    $('.slide-in').css('overflow', 'visible');
   });
 });
