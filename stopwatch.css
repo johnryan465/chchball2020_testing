@@ -1,5 +1,6 @@
 
 .clock {
+  zoom: 1;
   width:302px;
   height:388px;
   background-image:url(http://stebaker.com/clock_face/clock_face.png);
@@ -8,7 +9,6 @@
   left: calc((100% - 302px)/2);
   left: -webkit-calc((100% - 302px)/2);
   left: -moz-calc((100% - 302px)/2);
-  top:15%;
 }
 
 .container{
@@ -55,4 +55,38 @@
 	height:302px;
 	background-image:url(http://stebaker.com/clock_face/clock_pivot.png);
 	position: absolute;
+}
+.slide-in {
+  z-index: 10; /* to position it in front of the other content */
+  position: absolute;
+  overflow: hidden; /* to prevent scrollbar appearing */
+}
+
+.slide-in.from-left {
+  left: 100;
+}
+
+.slide-in.from-right {
+  right: 0;
+}
+
+.slide-in-content {
+  height: 388px;
+  width: 302px;
+  transition: all .5s ease; /* our nice transition */
+}
+
+.slide-in.from-left .slide-in-content {
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+.slide-in.from-right .slide-in-content {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+}
+
+.slide-in.show .slide-in-content {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
 }

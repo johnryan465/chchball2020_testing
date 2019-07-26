@@ -1,29 +1,32 @@
 $(function(){
-  function whichAnimationEvent(){
-  var t,
-      el = document.createElement("fakeelement");
+  function whichTransitionEvent(){
+    var t;
+    var el = document.createElement('fakeelement');
+    var transitions = {
+      'WebkitTransition' :'webkitTransitionEnd',
+      'MozTransition'    :'transitionend',
+      'MSTransition'     :'msTransitionEnd',
+      'OTransition'      :'oTransitionEnd',
+      'transition'       :'transitionEnd'
+    }
 
-  var animations = {
-    "animation"      : "animationend",
-    "OAnimation"     : "oAnimationEnd",
-    "MozAnimation"   : "animationend",
-    "WebkitAnimation": "webkitAnimationEnd"
-  }
-
-  for (t in animations){
-    if (el.style[t] !== undefined){
-      return animations[t];
+    for(t in transitions){
+      if( el.style[t] !== undefined ){
+        return transitions[t];
+      }
     }
   }
-}
 
-var animationEvent = whichAnimationEvent();
+  $(".top-flap")
+  .on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+   function(e){
+      $('.slide-in').addClass('show');
+      $(this).off(e);
+   });
   $('.envelope').click(function(){
     if(!$('.envelope').hasClass('open')){
       $(this).removeClass('new').addClass('open');
     }
-    if(!$('.clock').hasClass('hidden')){
-      $(this).removeClass('hidden').addClass('show');
-    }
+
   });
 });
