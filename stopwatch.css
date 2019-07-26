@@ -1,61 +1,4 @@
 
-.clock {
-  zoom: 1;
-  width:302px;
-  height:388px;
-  background-image:url(http://stebaker.com/clock_face/clock_face.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  left: calc((100% - 302px)/2);
-  left: -webkit-calc((100% - 302px)/2);
-  left: -moz-calc((100% - 302px)/2);
-}
-
-.container{
-	width:100%;
-	height: 100%;
-	position: fixed;
-}
-
-
-.clock div{
-	margin-top: 84px;
-}
-
-.clock-shadows div{
-	margin:0 0 0 10px;
-	opacity: 0.1;
-}
-
-.hour-hand{
-	width:302px;
-	height:302px;
-	background-image:url(http://stebaker.com/clock_face/clock_hour_hand.png);
-	position: absolute;
-}
-
-.minute-hand{
-	margin-left:1px;
-	width:302px;
-	height:302px;
-	background-image:url(http://stebaker.com/clock_face/clock_minute_hand.png);
-	position: absolute;
-}
-
-.seconds-hand{
-	margin-left:-1px;
-	width:302px;
-	height:302px;
-	background-image:url(http://stebaker.com/clock_face/clock_seconds_hand.png);
-	position: absolute;
-}
-
-.pivot{
-	width:302px;
-	height:302px;
-	background-image:url(http://stebaker.com/clock_face/clock_pivot.png);
-	position: absolute;
-}
 .slide-in {
   z-index: -1; /* to position it in front of the other content */
   position: absolute;
@@ -69,7 +12,7 @@
 }
 
 .slide-in.from-right {
-  top: 50%;
+  top: 90%;
 }
 
 .slide-in-content {
