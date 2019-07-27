@@ -1,11 +1,15 @@
 $(function(){
   $(document).ready(function(){;
-    document.body.style.setProperty("--device-width", screen.width );
-    document.body.style.setProperty("--device-height", screen.height );
+    document.documentElement.style.setProperty("--device-width",  $(window).width() );
+    document.documentElement.style.setProperty("--device-height", $(window).height() );
     e_width =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--envelope-width'));
     d_width =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--device-width'));
-    document.body.style.setProperty("--translation", (d_width-e_width)/2 + "px" );
-    console.log((d_width-e_width)/2);
+    document.documentElement.style.setProperty("--translation", (d_width-e_width)/2 + "px" );
+    e_height = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--envelope-height'));
+    d_height =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--device-height'));
+    document.documentElement.style.setProperty("--starting-envelope-height", (d_height-e_height)/2 + "px" );
+
+
   });
   $(".top-flap")
   .on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
