@@ -8,8 +8,8 @@ $(function(){
     e_height = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--envelope-height'));
     d_height =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--device-height'));
     document.documentElement.style.setProperty("--starting-envelope-height", (d_height-e_height)/2 + "px" );
-
-
+    $('.envelope').addClass('new');
+    $('.envelope').css("opacity",1);
   });
   $(".top-flap")
   .on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
