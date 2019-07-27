@@ -23,8 +23,8 @@ $(function(){
    .on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
    function(e){
      console.log("Letter done")
-     var $doc = $(document);
-     var scale = Math.min($doc.width()/$(this).width(),$doc.height()/$(this).height())
+     var $doc = $(window);
+     var scale = Math.min(  $doc.width()/$("#inv").width(),$doc.height()/$("#inv").height());
      document.body.style.setProperty("--scale-factor", scale);
      $("#inv").addClass("full-screen")
      $(this).off(e);
