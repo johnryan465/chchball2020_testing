@@ -1,5 +1,8 @@
 $(function(){
   $(document).ready(function(){;
+    $('body').ontouchend = (e) => {
+      e.preventDefault();
+    };
     document.documentElement.style.setProperty("--device-width",  $(window).innerWidth() );
     document.documentElement.style.setProperty("--device-height", $(window).innerHeight() );
     e_width =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--envelope-width'));
@@ -22,7 +25,6 @@ $(function(){
    $(".letter")
    .on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
    function(e){
-     console.log("Letter done")
      var $doc = $(window);
      var scale = Math.min(  $doc.width()/$("#inv").width(),$doc.height()/$("#inv").height());
      document.body.style.setProperty("--scale-factor", scale);
