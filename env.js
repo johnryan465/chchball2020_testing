@@ -1,7 +1,7 @@
 $(function(){
   $(document).ready(function(){;
-    document.documentElement.style.setProperty("--device-width",  $(window).width() );
-    document.documentElement.style.setProperty("--device-height", $(window).height() );
+    document.documentElement.style.setProperty("--device-width",  $(window).innerWidth() );
+    document.documentElement.style.setProperty("--device-height", $(window).innerHeight() );
     e_width =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--envelope-width'));
     d_width =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--device-width'));
     document.documentElement.style.setProperty("--translation", (d_width-e_width)/2 + "px" );
