@@ -1,3 +1,8 @@
+:root {
+  --coutdown-height: 112px;
+  --coutdown-width: 465px;
+}
+
 .slide-in {
   z-index: 10; /* to position it in front of the other content */
   position: absolute;
@@ -8,7 +13,7 @@
 }
 
 .slide-in.from-right {
-  top: 85%;
+  top: calc(85% - var(--coutdown-height)/2);
 }
 
 .slide-in-content {
@@ -34,8 +39,8 @@ body{
 	font: normal 13px/20px Arial, Helvetica, sans-serif; word-wrap:break-word;
 }
 #countdown{
-	width: 465px;
-	height: 112px;
+	width: var(--coutdown-width);
+	height: var(--coutdown-height);
 	text-align: center;
 	border-radius: 5px;
 	margin: auto;
