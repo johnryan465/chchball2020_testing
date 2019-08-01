@@ -16,6 +16,12 @@
   top: calc(90% - var(--coutdown-height)/2);
 }
 
+@media (max-aspect-ratio: 1/1) {
+  .slide-in.from-right {
+    top: calc(75% - var(--coutdown-height)/2);
+  }
+}
+
 .slide-in-content {
   transition: all 1s ease; /* our nice transition */
 }
