@@ -13,7 +13,7 @@
 }
 
 .slide-in.from-right {
-  top: calc(85% - var(--coutdown-height)/2);
+  top: calc(90% - var(--coutdown-height)/2);
 }
 
 .slide-in-content {
@@ -79,6 +79,8 @@ body{
 #countdown #tiles > span{
 	width: 92px;
 	max-width: 92px;
+  color: #DEB887;
+  text-shadow: 1px 1px 0px #000;
 	font: bold 48px 'Droid Sans', Arial, sans-serif;
 	text-align: center;
 	border-radius: 3px;
@@ -119,7 +121,7 @@ body{
 #countdown .labels li{
 	width: 102px;
 	font: bold 15px 'Droid Sans', Arial, sans-serif;
-	color: #f47321;
+	color: #DEB887;
 	text-shadow: 1px 1px 0px #000;
 	text-align: center;
 	text-transform: uppercase;
